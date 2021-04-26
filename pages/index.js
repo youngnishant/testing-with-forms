@@ -16,13 +16,13 @@ const handleSubmit = (event) => {
       "form-name": event.target.getAttribute("name"),
       ...name
     })
-  }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+  }).then(() => alert("thank-you")).catch(error => alert(error))
 }
 return (
   <form data-netlify="true" name="pizzaOrder" method="post" onSubmit={handleSubmit}>
     <input type="hidden" name="form-name" value="pizzaOrder" />
     <label>What order did the pizza give to the pineapple?
-      <input name="order" type="text" onChange={handleChange} />
+      <input name="order" type="text" />
     </label>
     <input type="submit"/>
   </form>
